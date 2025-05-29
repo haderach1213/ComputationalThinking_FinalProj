@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>音樂清單貪食蛇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="sidebar">
+            <button class="control-btn" id="startBtn">開始遊戲</button>
+            <div id="score-display">分數: 0</div>
+            <h3>已收集音樂</h3>
+            <div id="music-list"></div>
+        </div>
+    </div>
+        <!-- 放在 body 最底部 -->
+    <div id="feedback-modal" style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:100;">
+        <div style="background:#ddd; padding:24px 24px 40px 24px; border-radius:4px; width:320px; display:flex; flex-direction:column; box-sizing:border-box; position:relative;">
+            <h3 style="font-size:1.5em; margin:0 0 16px 0; font-weight:500;">回饋時間</h3>
+            <label style="margin-bottom:16px; display:block;">
+            暱稱：<input type="text" id="nickname" maxlength="20" style="margin-left:8px;">
+            </label>
+            <label style="margin-bottom:16px; display:block;">
+            留言：<input type="text" id="suggestedGenre" maxlength="30" placeholder="ex: 你喜歡的曲風" style="margin-left:8px;">
+            </label>
+            <button id="submitFeedback" style="position:absolute; right:24px; bottom:24px;">送出</button>
+        </div>
+    </div>
+
+
+    <div id="leaderboard-modal" style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:101;">
+        <div style="background:#fff; padding:24px 24px 80px 24px; border-radius:8px; min-width:400px; position:relative;">
+            <h3 style="font-size:2em; margin:0 0 16px 0;">排行榜</h3>
+            <div style="max-height:240px; overflow-y:auto; border:1px solid #ccc; border-radius:4px;">
+            <table style="width:100%; border-collapse:collapse;">
+                <thead>
+                <tr style="background:#eee; position:sticky; top:0;">
+                    <th style="padding:8px;">暱稱</th>
+                    <th style="padding:8px;">分數</th>
+                    <th style="padding:8px;">留言</th>
+                </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                <!-- 資料由 JS 動態填入 -->
+                </tbody>
+            </table>
+            </div>
+            <button onclick="document.getElementById('leaderboard-modal').style.display='none'" 
+            style="position:absolute; right:24px; bottom:24px;">關閉</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
