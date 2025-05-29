@@ -7,16 +7,15 @@ const MUSIC_TYPES = [
     'danceMusic', 'folk', 'RnB', 'lofiHipHop', 'pop', 'rock', 'jazz', 'Techno'
 ];
 
-#    The configuration need to fill to run 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
+  apiKey: "AIzaSyCZjzXE-l_T77CL-4dwnurqYlrTLRmnlyw",
+  authDomain: "greedysnake-adc50.firebaseapp.com",
+  databaseURL: "https://greedysnake-adc50-default-rtdb.firebaseio.com",
+  projectId: "greedysnake-adc50",
+  storageBucket: "greedysnake-adc50.firebasestorage.app",
+  messagingSenderId: "872797190193",
+  appId: "1:872797190193:web:5b93630557bc4cd3193d10",
+  measurementId: "G-VV9RJ8P9TP"
 };
 
 let snake = [];
