@@ -1,0 +1,76 @@
+#game-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1a1a1a;
+}
+
+#gameCanvas {
+    border: 3px solid #2c3e50;
+    border-radius: 10px;
+    background: #2c3e50;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#sidebar {
+    background: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#music-list {
+    height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background: #2c3e50;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4a6da7;
+}
+
+.control-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.control-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+#score-display {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#music-list div {
+    padding: 10px;
+    margin: 5px 0;
+    background: #3a3f4b;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#music-list div:hover {
+    background: #4a6da7;
+}
+
+#leaderboard-modal table th,
+#leaderboard-modal table td {
+    text-align: center;
+    vertical-align: middle;
+  }
